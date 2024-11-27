@@ -1,12 +1,7 @@
 <div class="flex flex-col xl:flex-row justify-between mb-20 xl:mb-52">
   <ul class="list-none text-[#52414C] text-3xl sm:text-4xl md:text-5xl flex flex-col gap-6 md:gap-10 roboto-mono nav-hover">
-    <li
-        *ngFor="let item of nonCurrentItems"
-        [ngClass]="{ 'disable-hover': isNavigating }">
-      <a
-        [routerLink]="item.route"
-        (click)="clearHoverState()"
-        >
+    <li *ngFor="let item of navItems">
+      <a [routerLink]="item.route">
         {{ item.label }}
       </a>
     </li>
