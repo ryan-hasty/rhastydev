@@ -12,12 +12,15 @@ import {Subscription} from 'rxjs';
   selector: 'app-header',
   imports: [
     RouterLink,
-    NgForOf
+    NgForOf,
+    NgClass
   ],
   templateUrl: './header.component.html',
   styleUrl: './header.component.css'
 })
 export class HeaderComponent{
+
+  private routerSubscription: Subscription | undefined;
 
   navItems = [
     {label: 'HOME', route: '/home'},
@@ -29,7 +32,7 @@ export class HeaderComponent{
 
 
   nonCurrentItems: any[] = [];
-  private routerSubscription: Subscription | undefined;
+  isNavigating: boolean = false;
 
   constructor(private router: Router) {}
 
@@ -56,4 +59,12 @@ export class HeaderComponent{
   private filterNonCurrentNavItems(): void {
     this.nonCurrentItems = this.navItems.filter(item => item.route !== this.router.url);
   }
+
+  clearHoverState() {
+    this.isNavigating = true;
+    setTimeout(() => {
+      this.isNavigating = false;
+    }, 100);
+  }
+
 }
