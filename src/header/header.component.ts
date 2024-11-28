@@ -12,7 +12,8 @@ import {Subscription} from 'rxjs';
   selector: 'app-header',
   imports: [
     RouterLink,
-    NgForOf
+    NgForOf,
+    NgClass
   ],
   templateUrl: './header.component.html',
   styleUrl: './header.component.css'
@@ -26,4 +27,15 @@ export class HeaderComponent{
     {label: 'SKILLS', route: '/skills'},
     {label: 'EXPERIENCE', route: '/experience'}
   ]
+
+  currentRoute: string = '';
+
+  constructor(private router: Router) {
+    this.currentRoute = this.router.url; // Get the current route immediately
+  }
+
+  isActiveRoute(route: string): boolean {
+    return this.currentRoute === route; // Compare the current route to the provided one
+  }
+
 }
