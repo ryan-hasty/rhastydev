@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
 import {NavigationEnd, Router, RouterLink} from '@angular/router';
 import {NgClass, NgForOf, NgIf} from '@angular/common';
-import {HomeComponent} from '../home/home.component';
-import {AboutComponent} from '../about/about.component';
-import {EducationComponent} from '../education/education.component';
-import {SkillsComponent} from '../skills/skills.component';
-import {ExperienceComponent} from '../experience/experience.component';
+import {HomeComponent} from '../../pages/home/home.component';
+import {AboutComponent} from '../../pages/about/about.component';
+import {EducationComponent} from '../../pages/education/education.component';
+import {SkillsComponent} from '../../pages/skills/skills.component';
+import {ExperienceComponent} from '../../pages/experience/experience.component';
 import {Subscription} from 'rxjs';
 
 @Component({
