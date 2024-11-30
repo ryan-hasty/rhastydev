@@ -1,12 +1,7 @@
 import { Component } from '@angular/core';
 import {NavigationEnd, Router, RouterLink} from '@angular/router';
 import {NgClass, NgForOf, NgIf} from '@angular/common';
-import {HomeComponent} from '../../pages/home/home.component';
-import {AboutComponent} from '../../pages/about/about.component';
-import {EducationComponent} from '../../pages/education/education.component';
-import {SkillsComponent} from '../../pages/skills/skills.component';
-import {ExperienceComponent} from '../../pages/experience/experience.component';
-import {Subscription} from 'rxjs';
+import {ryanQuote} from '../../app/constants';
 
 @Component({
   selector: 'app-header',
@@ -38,4 +33,5 @@ export class HeaderComponent{
     return this.currentRoute === route; // Compare the current route to the provided one
   }
 
+  protected readonly ryanQuote = ryanQuote;
 }
