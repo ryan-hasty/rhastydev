@@ -13,62 +13,79 @@ import {NgForOf} from '@angular/common';
 })
 export class SkillsComponent {
 
-  programmingLanguages = [
+  primaryLanguages = [
     { name: 'KOTLIN' },
     { name: 'JAVA' },
     { name: 'C#' },
     { name: 'PYTHON' },
-
+    { name: 'SQL' },
   ]
 
   databaseTech = [
     { name: 'RELATIONAL DATABASES' },
-    { name: 'SQL' },
     { name: 'MSSQL SERVER' },
-    { name: 'IBM DB2' }
+    { name: 'IBM DB2' },
+    { name: 'QMF' },
+    { name: 'MONGODB'}
   ]
 
-  frameworks = [
+  spring = [
     { name: 'SPRING BOOT' },
     { name: 'HIBERNATE' },
     { name: 'SPRING DATA JPA' },
-    { name: 'JUNIT' }
+    { name: 'SPRING SECURITY' },
+    { name: 'SPRING MVC' }
   ]
 
-  otherTools = [
-    { name: "REST APIS" },
+  versionControl = [
     { name: 'GIT' },
     { name: 'GITLAB' },
-    { name: 'INTELLIJ IDEA' }
+    { name: 'GITHUB' },
+    { name: 'CI / CD PIPELINES' },
+    { name: 'JIRA' }
   ]
 
   process = [
-    { name: 'CI / CD PIPELINES' },
+    { name: "REST APIS" },
     { name: 'SPLUNK' },
     { name: 'AGILE' },
-    { name: 'JIRA' }
+    { name: 'INTELLIJ IDEA' },
+    { name: 'SWAGGER' }
+  ]
+
+  devOpsTools = [
+    { name: 'KUBERNETES' },
+    { name: 'DOCKER' },
+    { name: 'GRADLE'},
+    { name: 'JUNIT' },
+    { name: 'MOCKITO'}
   ]
 
   sections = [
     {
       title: 'LANGUAGES',
-      items: this.programmingLanguages
+      items: this.primaryLanguages
     },
     {
       title: 'DATABASES',
       items: this.databaseTech
     },
     {
-      title: 'FRAMEWORKS',
-      items: this.frameworks
+      title: 'SPRING',
+      items: this.spring
     },
     {
-      title: 'TOOLS',
-      items: this.otherTools
+      title: 'VERSION CONTROL',
+      items: this.versionControl
     },
     {
       title: 'PROCESS',
       items: this.process
+    },
+    {
+      title: 'DEVOPS TOOLS',
+      items: this.devOpsTools
+
     }
   ];
 
