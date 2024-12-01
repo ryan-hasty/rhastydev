@@ -20,8 +20,8 @@ export class QuotesComponent implements OnInit {
     '/about': {smartQuote: {quote: '"Sometimes it is the people no one can imagine anything of who do the things no one can imagine."', author: '-Alan Turing'},
       ryanQuote: {quote: '"Sometimes it is me no one can imagine anything of… and they’re right."', author: this.ryanAuthor} },
 
-    '/education': {smartQuote: {quote: '"Innovation distinguishes between a leader and a follower."', author: '-Steve Jobs'},
-      ryanQuote: {quote: '"My greatest innovation? Remembering where I saved the file."', author: this.ryanAuthor} },
+    '/education': {smartQuote: {quote: '"Any fool can write code that a computer can understand. Good programmers write code that humans can understand."', author: '-Martin Fowler'},
+      ryanQuote: {quote: '"I write code that only I can understand… until next week."', author: this.ryanAuthor} },
 
     '/skills': {smartQuote: {quote: '"Software is a great combination of artistry and engineering."', author: '-Bill Gates'},
       ryanQuote: {quote: '"My code is a great combination of trial and error."', author: this.ryanAuthor} },
