@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import {creations, hasty} from "../../app/constants";
 
 @Component({
   selector: 'app-hasty-creations',
@@ -9,6 +8,6 @@ import {creations, hasty} from "../../app/constants";
 })
 export class HastyCreationsComponent {
 
-    protected readonly creationsText = creations;
-    protected readonly hastyText = hasty;
+    protected readonly hastyText = 'HASTY';
+    protected readonly creationsText = 'CREATIONS';
 }

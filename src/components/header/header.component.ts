@@ -1,14 +1,15 @@
 import { Component } from '@angular/core';
-import {NavigationEnd, Router, RouterLink} from '@angular/router';
-import {NgClass, NgForOf, NgIf} from '@angular/common';
-import {ryanQuote} from '../../app/constants';
+import {Router, RouterLink} from '@angular/router';
+import {NgClass, NgForOf} from '@angular/common';
+import {QuotesComponent} from '../quotes/quotes.component';
 
 @Component({
   selector: 'app-header',
   imports: [
     RouterLink,
     NgForOf,
-    NgClass
+    NgClass,
+    QuotesComponent
   ],
   templateUrl: './header.component.html',
   styleUrl: './header.component.css'
@@ -32,6 +33,4 @@ export class HeaderComponent{
   isActiveRoute(route: string): boolean {
     return this.currentRoute === route; // Compare the current route to the provided one
   }
-
-  protected readonly ryanQuote = ryanQuote;
 }

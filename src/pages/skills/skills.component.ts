@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import {HeaderComponent} from "../../components/header/header.component";
 import {NgForOf} from '@angular/common';
+import {QuotesComponent} from '../../components/quotes/quotes.component';
 
 @Component({
   selector: 'app-skills',
@@ -85,7 +86,6 @@ export class SkillsComponent {
     {
       title: 'DEVOPS TOOLS',
       items: this.devOpsTools
-
     }
   ];
 
