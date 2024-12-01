@@ -1,4 +1,4 @@
-<div class="flex xl:flex-row justify-between mb-20 xl:mb-52">
+<div class="flex xl:flex-row justify-between mb-20 xl:mb-20">
   <ul class="list-none text-[#52414C] text-3xl sm:text-4xl lg:text-5xl flex flex-col gap-6 md:gap-10 roboto-mono">
     <li *ngFor="let item of navItems" [ngClass]="{'text-[#EF8A17]': isActiveRoute(item.route)}">
       <a [routerLink]="item.route" class="transition-all duration-300 hover:text-[#EF8A17]">
