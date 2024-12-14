@@ -2,12 +2,14 @@ import { Component } from '@angular/core';
 import {HeaderComponent} from "../../components/header/header.component";
 import {NgForOf} from '@angular/common';
 import {QuotesComponent} from '../../components/quotes/quotes.component';
+import {HastyCreationsComponent} from '../../components/hasty-creations/hasty-creations.component';
 
 @Component({
   selector: 'app-skills',
   imports: [
     HeaderComponent,
-    NgForOf
+    NgForOf,
+    HastyCreationsComponent
   ],
   templateUrl: './skills.component.html',
   styleUrl: './skills.component.css'

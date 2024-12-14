@@ -14,8 +14,6 @@ export class QuotesComponent implements OnInit {
 
 
   routeQuotes = {
-    '/home': { smartQuote: {quote: '"I think it is possible for ordinary people to choose to be extraordinary."', author: '-Elon Musk'},
-      ryanQuote: {quote: '"I think it is possible for me to choose more coffee… maybe tomorrow."', author: this.ryanAuthor} },
 
     '/about': {smartQuote: {quote: '"Sometimes it is the people no one can imagine anything of who do the things no one can imagine."', author: '-Alan Turing'},
       ryanQuote: {quote: '"Sometimes it is me no one can imagine anything of… and they’re right."', author: this.ryanAuthor} },
@@ -38,11 +36,6 @@ export class QuotesComponent implements OnInit {
   private setQuotes(route: string): void {
 
     switch (route) {
-      case '/home':
-        const homeQuotes = this.routeQuotes['/home'];
-        this.smartQuote = homeQuotes.smartQuote;
-        this.ryanQuote = homeQuotes.ryanQuote;
-        break;
       case '/skills':
         const skillsQuotes = this.routeQuotes['/skills'];
         this.smartQuote = skillsQuotes.smartQuote;

@@ -1,13 +1,11 @@
 import { Routes } from '@angular/router';
-import {HomeComponent} from '../pages/home/home.component';
 import {AboutComponent} from '../pages/about/about.component';
 import {EducationComponent} from '../pages/education/education.component';
 import {SkillsComponent} from '../pages/skills/skills.component';
 import {ExperienceComponent} from '../pages/experience/experience.component';
 
 export const routes: Routes = [
-  {path: '', redirectTo: '/home', pathMatch: 'full'},
-  {path: 'home', component: HomeComponent},
+  {path: '', redirectTo: '/about', pathMatch: 'full'},
   {path: 'about', component: AboutComponent},
   {path: 'education', component: EducationComponent},
   {path: 'skills', component: SkillsComponent},

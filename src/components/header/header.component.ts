@@ -1,7 +1,8 @@
 import { Component } from '@angular/core';
 import {Router, RouterLink} from '@angular/router';
-import {NgClass, NgForOf} from '@angular/common';
+import {NgClass, NgForOf, NgIf} from '@angular/common';
 import {QuotesComponent} from '../quotes/quotes.component';
+import {HastyCreationsComponent} from '../hasty-creations/hasty-creations.component';
 
 @Component({
   selector: 'app-header',
@@ -9,7 +10,9 @@ import {QuotesComponent} from '../quotes/quotes.component';
     RouterLink,
     NgForOf,
     NgClass,
-    QuotesComponent
+    QuotesComponent,
+    NgIf,
+    HastyCreationsComponent
   ],
   templateUrl: './header.component.html',
   styleUrl: './header.component.css'
@@ -17,7 +20,6 @@ import {QuotesComponent} from '../quotes/quotes.component';
 export class HeaderComponent{
 
   navItems = [
-    {label: 'HOME', route: '/home'},
     {label: 'WHO_AM_I', route: '/about'},
     {label: 'EDUCATION', route: '/education'},
     {label: 'SKILLS', route: '/skills'},
@@ -25,6 +27,7 @@ export class HeaderComponent{
   ]
 
   currentRoute: string = '';
+  isNavbarHidden: boolean = true;
 
   constructor(private router: Router) {
     this.currentRoute = this.router.url; // Get the current route immediately
@@ -33,4 +36,7 @@ export class HeaderComponent{
   isActiveRoute(route: string): boolean {
     return this.currentRoute === route; // Compare the current route to the provided one
   }
+
+  toggleIsNavbarHidden(){
+    this.isNavbarHidden = !this.isNavbarHidden;}
 }
